@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        requestAPI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +22,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    private func requestAPI() {
+        let request = ITunesSearchRequest(term: "コブクロ")
 
+        APIClient.request(request: request)
+            .success { result in
+                Logger.debug(message: "result: \(result)")
+
+            }.failure { error in
+                Logger.debug(message: "error: \(error)")
+
+            }.then { _, _ in
+                Logger.debug(message: "done")
+        }
+    }
 }
-

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B61BFAAB209A16FE00F5C3DE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61BFAA9209A16FE00F5C3DE /* Alamofire.framework */; };
+		B61BFAAC209A16FE00F5C3DE /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61BFAAA209A16FE00F5C3DE /* SwiftTask.framework */; };
+		B61BFAB0209A178B00F5C3DE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61BFAAF209A178B00F5C3DE /* APIClient.swift */; };
+		B61BFAB2209A18F500F5C3DE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61BFAB1209A18F500F5C3DE /* Request.swift */; };
+		B61BFAB7209A27AE00F5C3DE /* ITunesSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61BFAB6209A27AE00F5C3DE /* ITunesSearchRequest.swift */; };
+		B61BFAB9209A289D00F5C3DE /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61BFAB8209A289D00F5C3DE /* Tracks.swift */; };
+		B61BFABD209AA9BA00F5C3DE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61BFABC209AA9BA00F5C3DE /* Logger.swift */; };
 		B673D1EE209A11B80086958A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673D1ED209A11B80086958A /* AppDelegate.swift */; };
 		B673D1F0209A11B80086958A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673D1EF209A11B80086958A /* ViewController.swift */; };
 		B673D1F3209A11B80086958A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B673D1F1209A11B80086958A /* Main.storyboard */; };
@@ -34,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B61BFAA9209A16FE00F5C3DE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		B61BFAAA209A16FE00F5C3DE /* SwiftTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTask.framework; path = Carthage/Build/iOS/SwiftTask.framework; sourceTree = "<group>"; };
+		B61BFAAF209A178B00F5C3DE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B61BFAB1209A18F500F5C3DE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B61BFAB6209A27AE00F5C3DE /* ITunesSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSearchRequest.swift; sourceTree = "<group>"; };
+		B61BFAB8209A289D00F5C3DE /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
+		B61BFABC209AA9BA00F5C3DE /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B673D1EA209A11B80086958A /* ios-alamofire-swifttask-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-alamofire-swifttask-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B673D1ED209A11B80086958A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B673D1EF209A11B80086958A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61BFAAB209A16FE00F5C3DE /* Alamofire.framework in Frameworks */,
+				B61BFAAC209A16FE00F5C3DE /* SwiftTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +90,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B61BFAA8209A16FD00F5C3DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B61BFAA9209A16FE00F5C3DE /* Alamofire.framework */,
+				B61BFAAA209A16FE00F5C3DE /* SwiftTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B61BFAAE209A177F00F5C3DE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B61BFAAF209A178B00F5C3DE /* APIClient.swift */,
+				B61BFAB1209A18F500F5C3DE /* Request.swift */,
+				B61BFABC209AA9BA00F5C3DE /* Logger.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B61BFAB3209A277C00F5C3DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B61BFABA209AA23800F5C3DE /* APIRequest */,
+				B61BFABB209AA25100F5C3DE /* APIResponse */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B61BFABA209AA23800F5C3DE /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				B61BFAB6209A27AE00F5C3DE /* ITunesSearchRequest.swift */,
+			);
+			path = APIRequest;
+			sourceTree = "<group>";
+		};
+		B61BFABB209AA25100F5C3DE /* APIResponse */ = {
+			isa = PBXGroup;
+			children = (
+				B61BFAB8209A289D00F5C3DE /* Tracks.swift */,
+			);
+			path = APIResponse;
+			sourceTree = "<group>";
+		};
 		B673D1E1209A11B80086958A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +141,7 @@
 				B673D201209A11BA0086958A /* ios-alamofire-swifttask-demoTests */,
 				B673D20C209A11BA0086958A /* ios-alamofire-swifttask-demoUITests */,
 				B673D1EB209A11B80086958A /* Products */,
+				B61BFAA8209A16FD00F5C3DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +158,8 @@
 		B673D1EC209A11B80086958A /* ios-alamofire-swifttask-demo */ = {
 			isa = PBXGroup;
 			children = (
+				B61BFAB3209A277C00F5C3DE /* Models */,
+				B61BFAAE209A177F00F5C3DE /* Helper */,
 				B673D1ED209A11B80086958A /* AppDelegate.swift */,
 				B673D1EF209A11B80086958A /* ViewController.swift */,
 				B673D1F1209A11B80086958A /* Main.storyboard */,
@@ -135,6 +198,7 @@
 				B673D1E6209A11B80086958A /* Sources */,
 				B673D1E7209A11B80086958A /* Frameworks */,
 				B673D1E8209A11B80086958A /* Resources */,
+				B61BFAAD209A170800F5C3DE /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -251,13 +315,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B61BFAAD209A170800F5C3DE /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftTask.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B673D1E6209A11B80086958A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B673D1F0209A11B80086958A /* ViewController.swift in Sources */,
+				B61BFAB2209A18F500F5C3DE /* Request.swift in Sources */,
 				B673D1EE209A11B80086958A /* AppDelegate.swift in Sources */,
+				B61BFAB9209A289D00F5C3DE /* Tracks.swift in Sources */,
+				B61BFABD209AA9BA00F5C3DE /* Logger.swift in Sources */,
+				B61BFAB0209A178B00F5C3DE /* APIClient.swift in Sources */,
+				B61BFAB7209A27AE00F5C3DE /* ITunesSearchRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +520,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ios-alamofire-swifttask-demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +542,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ios-alamofire-swifttask-demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
