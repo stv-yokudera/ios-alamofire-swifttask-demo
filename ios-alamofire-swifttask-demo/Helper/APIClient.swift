@@ -11,8 +11,8 @@ import SwiftTask
 
 enum APIError: Error {
     case connectionError(Error)
-    case invalidResponse(Any?)
-    case parseError(Any?)
+    case invalidResponse
+    case parseError(Data)
 }
 
 struct APIClient {
@@ -38,7 +38,7 @@ struct APIClient {
                     guard
                         let responseData = response.result.value,
                         let urlResponse = response.response else {
-                            reject(.invalidResponse(nil))
+                            reject(.invalidResponse)
                             return
                     }
                     

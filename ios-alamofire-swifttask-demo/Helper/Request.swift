@@ -7,11 +7,12 @@
 //
 
 import Alamofire
-import Foundation
+import SwiftTask
 
 protocol Request {
 
     associatedtype Response
+    associatedtype ErrorType
 
     var baseURL: URL { get }
     var method: HTTPMethod { get }
@@ -19,6 +20,7 @@ protocol Request {
     var parameters: [String: Any] { get }
     var httpHeaderFields: [String: String] { get }
 
+    func sendAPIRequest() -> Task<Float, Response, ErrorType>
     func responseFromData(data: Data, urlResponse: HTTPURLResponse) -> Response?
     func errorFromObject(object: Any, urlResponse: HTTPURLResponse) -> Error?
 }
